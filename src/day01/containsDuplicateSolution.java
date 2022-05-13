@@ -11,16 +11,15 @@ public class containsDuplicateSolution {
         System.out.println(containsDuplicated(myArr2)); // Expected - false
         int[] myArr3 = {1, 1, 1, 3, 3, 4, 3, 2, 4, 2};
         System.out.println(containsDuplicated(myArr3)); //Expected - true
-
     }
 
     public static boolean containsDuplicated(int[] nums) {
         HashSet arrayList = new HashSet();
-        for (int i = 0; i < nums.length; i++) {
-            if (arrayList.contains(nums[i])) {
+        for (int num : nums) {
+            if (arrayList.contains(num)) {
                 return true;
             } else {
-                arrayList.add(nums[i]);
+                arrayList.add(num);
             }
         }
         return false;
